@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+
+	<head>
+	<meta charset = "UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+
+	<title>Survey Form</title>
+	</head>
+ <body>
+	<main id="main">
+		
+		<header class="header">
+			<h1 id="title">Coding School Survey Form</h1>
+
+			<p id="description"><i>Thank you for taking the time to help us improve our coding curriculum</i></p>
+
+			<p class="required">(*)Required</p>
+		</header>
+
+		<form id="survey-form">
+
+			<div class="form-group">
+				<label 
+				for="name" 
+				id="name-label">*Name</label>
+				<input 
+				type="text" 
+				name="name" 
+				id="name" 
+				placeholder="First Last"
+				required>
+			</div>
+
+			<div class="form-group">
+				<label 
+				for="email" 
+				id="email-label">*Email</label>
+				<input 
+				type="email" 
+				name="email" 
+				id="email" 
+				class="form-control" 
+				placeholder="your@email.com"
+				required>
+			</div>
+
+			<div class="form-group">
+				<label 
+				for="number" 
+				id="number-label">Age <span class="clue">(optional)</span>
+				</label>
+				<input 
+				type="number" 
+				name="age" 
+				id="number"
+				class="form-control" 
+				min="10"
+				max="100" 
+				placeholder="30">
+			</div>
+
+			<div class="form-group">
+				<p>*Which option best describes your current role?</p>
+				<select
+				id="dropdown"
+				name="currentrole"
+				class="form-control"
+				required>
+					<option disabled selected value>Select your current role</option>
+					<option value="unemployed">Unemployed</option>
+					<option value="student">Student</option>
+					<option value="full-time">Full-time</option>
+					<option value="part-time">Part-time</option>
+					<option value="contracter">Contracter</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<p>*Would you recommend Coding School to a friend?</p>
+				<fieldset
+				class="input-radio"
+				required>
+					<input 
+					type="radio" 
+					name="recommend"
+					id="yes"
+					value="yes">
+					<label
+					for="yes">Yes</label>
+					<br>
+					<input 
+					type="radio" 
+					name="recommend"
+					id="maybe"
+					value="maybe">
+					<label
+					for="maybe">Maybe</label>
+					<br>
+					<input 
+					type="radio" 
+					name="recommend"
+					id="no"
+					value="no">
+					<label
+					for="no">No</label>
+				</fieldset>
+			</div>
+
+			<div class="form-group">
+				<p>*What is your favorite feature at Coding School?</p>
+				<select
+				id="favorite-feature"
+				name="favoritefeature"
+				class="form-control"
+				required>
+					<option disabled selected value>Select your favorite feature</option>
+					<option value="projects">Projects</option>
+					<option value="livechallenges">Live Challenges</option>
+					<option value="price">Price</option>
+					<option value="community">Community</option>
+					<option value="teachers">Teachers</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<p>*What do you wish you had more knowledge in? <span class="clue">(check all that apply)</span></p>
+				<fieldset
+				class="input-checkbox"
+				required>
+					<input 
+					type="checkbox" 
+					name="knowledge"
+					id="frontend"
+					value="frontend-projects">
+					<label
+					for="frontend">Frontend Projects</label>
+					<br>
+					<input 
+					type="checkbox" 
+					name="knowledge"
+					id="backend"
+					value="backend-projects">
+					<label
+					for="backend">Backend Projects</label>
+					<br>
+					<input 
+					type="checkbox" 
+					name="knowledge"
+					id="datavis"
+					value="data-visualization">
+					<label
+					for="datavis">Data Visualization</label>
+					<br>
+					<input 
+					type="checkbox" 
+					name="knowledge"
+					id="react"
+					value="react">
+					<label
+					for="react">React</label>
+					<br>
+					<input 
+					type="checkbox" 
+					name="knowledge"
+					id="plan"
+					value="project-planning">
+					<label
+					for="plan">Project Planning</label>
+				</fieldset>
+			</div>
+
+			<div class="form-group">
+				<p>Any comments or feedback?</p>
+				<textarea placeholder="Enter your comments here..." name="comment"id="comments"></textarea>
+			</div>
+
+			<div class="form-group">
+				<button 
+				type="submit"
+				id="submit" 
+				>Submit</button>
+			</div>
+
+		</form>
+
+	</main>
+</body>
+</html>
